@@ -1,0 +1,20 @@
+{
+  "brand": "CODEX DREAM",
+  "subtitle": "PERSONAL LAUNCH SEQUENCE",
+  "backgroundImage": "assets\\violet-evergarden.jpg",
+  "coverScreen": true,
+  "appUserModelId": "OpenAI.Codex_2p2nqsd0c76g0!App",
+  "targetProcess": "ChatGPT",
+  "minimumDisplayMilliseconds": 2200,
+  "maximumWaitMilliseconds": 40000,
+  "statusMessages": [
+    "INITIALIZING WORKSPACE",
+    "LOCATING CODEX",
+    "PREPARING SESSION",
+    "WAITING FOR CODEX HOME"
+  ],
+  "readyText": [
+    "我们要构建什么",
+    "What would you like to build"
+  ]
+}

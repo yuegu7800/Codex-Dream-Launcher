@@ -1,0 +1,7 @@
+{
+  "workspaceEnabled": false,
+  "workspaceImage": "assets\\violet-evergarden.jpg",
+  "workspaceOpacity": 0.035,
+  "targetProcess": "ChatGPT",
+  "syncStartupWallpaper": true
+}
