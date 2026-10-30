@@ -1,0 +1,381 @@
+﻿{
+    "schema":  1,
+    "version":  "0.2.0-seamless.1",
+    "files":  [
+                  {
+                      "path":  ".gitattributes",
+                      "bytes":  138,
+                      "sha256":  "194df1211f4eb738fd40e49fd53ee1c4c200b7fccb620eb8404bb1a6f27ac3b1"
+                  },
+                  {
+                      "path":  ".github/workflows/packages.yml",
+                      "bytes":  485,
+                      "sha256":  "3cd11cd7675b6cc70856328bbd15ff993a428c7f3eae020652d6d044f7b3a584"
+                  },
+                  {
+                      "path":  ".gitignore",
+                      "bytes":  159,
+                      "sha256":  "6a741a09de4e1f1f17b7e3fcf9f3efb0db3185f19b01fc90f4b093fea93b2ac1"
+                  },
+                  {
+                      "path":  "AGENTS.md",
+                      "bytes":  2767,
+                      "sha256":  "ca948a3fc3bc792fb7a56adeb9a5329fcd66981eb1856547ea793d40df3d0d6f"
+                  },
+                  {
+                      "path":  "DEPLOY_WITH_GPT.md",
+                      "bytes":  1229,
+                      "sha256":  "1d6d0b703bb5376d5a1afe3260e5422cb56e30840c6eb8edf3ee5c40a97278f6"
+                  },
+                  {
+                      "path":  "docs/CHANGES.md",
+                      "bytes":  1851,
+                      "sha256":  "0e40098abde3cd1e13651a8204a2cd292f8afab5a4c5b037bbdecd486cd3303b"
+                  },
+                  {
+                      "path":  "docs/DEPLOYMENT.md",
+                      "bytes":  3736,
+                      "sha256":  "0fd17aedaf720b4c55f29eaf7d0109ef51c7113f5ff2f3c4cb0da4e1741f8750"
+                  },
+                  {
+                      "path":  "docs/EXPORT-VALIDATION.md",
+                      "bytes":  1441,
+                      "sha256":  "9c776db7504faeeec9ecdb0dd15758b5539d5c0d322b2997aa68755c14aae902"
+                  },
+                  {
+                      "path":  "docs/PUBLISHING.md",
+                      "bytes":  2025,
+                      "sha256":  "db56960c160a0027541d2052d72d5734e1f6646862f06734f89bb8e445b61cc7"
+                  },
+                  {
+                      "path":  "docs/SECURITY-MODES.md",
+                      "bytes":  1425,
+                      "sha256":  "a2bb7dff64bf2fe23e947adcc74bf8c6a958f9c6ef7e8ffdbc9da916adcbb436"
+                  },
+                  {
+                      "path":  "docs/TESTING.md",
+                      "bytes":  1814,
+                      "sha256":  "d6698412927cb145a292821d6f6feec1cddd174cb09c466aa6248483a080308a"
+                  },
+                  {
+                      "path":  "docs/THEME-MANAGER.md",
+                      "bytes":  1414,
+                      "sha256":  "79eac97932f8fbd75324899ef266e9a81b0faa7ad04311a8f4b19fa81a9dd6df"
+                  },
+                  {
+                      "path":  "engine/assets/compat-profile-client.mjs",
+                      "bytes":  17560,
+                      "sha256":  "9cf67b805cd81d2c5d0e77bfe23abaef4a2831c2f0aca20159a49cbde721d6e3"
+                  },
+                  {
+                      "path":  "engine/assets/dream-skin.css",
+                      "bytes":  97219,
+                      "sha256":  "78f33c79448ef9ed6a560a490411952111fedf1db0f877673a33b2f6ca1ac30c"
+                  },
+                  {
+                      "path":  "engine/assets/renderer-inject.js",
+                      "bytes":  78992,
+                      "sha256":  "63c0312b6f2ef3a5fb17f1551f79a76e7a4fbcb301dc3da6fd4dabc0b3f02461"
+                  },
+                  {
+                      "path":  "engine/assets/safe-css-policy.json",
+                      "bytes":  2009,
+                      "sha256":  "c784dd3a16d71395fca0b2695047395dc6f951f44df962284976faeb0b3ea551"
+                  },
+                  {
+                      "path":  "engine/assets/safe-css-validator.mjs",
+                      "bytes":  22877,
+                      "sha256":  "98a626655a4167ba0bbbff5eab96e78de7a5a74371e4a4ff6d8ac15211e5b24e"
+                  },
+                  {
+                      "path":  "engine/assets/selectors.json",
+                      "bytes":  12232,
+                      "sha256":  "939217a45f6502b9939a23f8eb6d1e766d306a94f462adfe38d9d50d0c191873"
+                  },
+                  {
+                      "path":  "engine/assets/theme-package-validator.mjs",
+                      "bytes":  21428,
+                      "sha256":  "8f249d726367c383d8c5894890e2b6d1c3b56a7282d7441a80cfb6470955b5f8"
+                  },
+                  {
+                      "path":  "engine/assets/theme-preferences.mjs",
+                      "bytes":  2093,
+                      "sha256":  "a0e8b92eff21ce3ec59031205ae8cab2dd229f5f2f2f1310de9a608bb1a89275"
+                  },
+                  {
+                      "path":  "engine/scripts/common-windows.ps1",
+                      "bytes":  64840,
+                      "sha256":  "a6ea8e59633943ec49f2d41061882e84a7b2255c4b442944d55fb0dd36914fc9"
+                  },
+                  {
+                      "path":  "engine/scripts/config-utf8.ps1",
+                      "bytes":  65616,
+                      "sha256":  "95170e1deccf31cd49f366d29f6b922e6ca9b3259ed8f1bd38e4747fda264ee4"
+                  },
+                  {
+                      "path":  "engine/scripts/image-metadata.mjs",
+                      "bytes":  6164,
+                      "sha256":  "4ec6d1794a2ba58e3733bcab74723f4e2e061ad8d4e7bbc8664693d4aef09cb4"
+                  },
+                  {
+                      "path":  "engine/scripts/injector.mjs",
+                      "bytes":  106630,
+                      "sha256":  "f9c2fbbe0e1e38b120cb22d998e1212981dd664e22ca13ed57f599a5ceff1cd7"
+                  },
+                  {
+                      "path":  "engine/scripts/theme-windows.ps1",
+                      "bytes":  142717,
+                      "sha256":  "aff300f8e3c7d645bf90a097cd67b9f61fc49ddde28c3d06370bceb1b9648540"
+                  },
+                  {
+                      "path":  "engine/scripts/validate-safe-css-file.mjs",
+                      "bytes":  1414,
+                      "sha256":  "51a7ff9e2f85d6586390b3855dc63faa4d549c20fe76d852d82196d558b5da26"
+                  },
+                  {
+                      "path":  "Install.cmd",
+                      "bytes":  293,
+                      "sha256":  "da6227043478b27a95cf9e6c81c0ae78c85effa4a30b442c89d7cd5d95f1886a"
+                  },
+                  {
+                      "path":  "Install.ps1",
+                      "bytes":  7603,
+                      "sha256":  "9681e2c31d61c9060da793db90c7ce43a4ee21e5d7fd8c4b810dfa3980cb0057"
+                  },
+                  {
+                      "path":  "LICENSE",
+                      "bytes":  1087,
+                      "sha256":  "4ffc2131be78bd83127661a0f6a2994bc05df71bfd9b629beb585cced63e67b1"
+                  },
+                  {
+                      "path":  "licenses/Codex-Dynamic-Skin-LICENSE.txt",
+                      "bytes":  1093,
+                      "sha256":  "18f8478d0f9efd45307e5f17790194593b116658145c758ced3166398eb05b21"
+                  },
+                  {
+                      "path":  "licenses/Node.js-LICENSE.txt",
+                      "bytes":  148217,
+                      "sha256":  "8cc9bb466b19fc7e7cc99d03e9df1132021fda8b01eea2624c58bb372dbef576"
+                  },
+                  {
+                      "path":  "media/continuity.mp4",
+                      "bytes":  17547512,
+                      "sha256":  "99b0c5ae9b132fb4018553a3c40f221fecf5ffafdb618833e6fc91db3de41577"
+                  },
+                  {
+                      "path":  "media/MEDIA_NOTICE.md",
+                      "bytes":  619,
+                      "sha256":  "e61aa3c6d5631bc89b42cd952e9cf0b33ca7f85f780274611b9c02b50a16cebc"
+                  },
+                  {
+                      "path":  "media/startup.mp4",
+                      "bytes":  22937247,
+                      "sha256":  "a322c9947e6486c887cdc0ba913bbe57476b230abf45d85d95d86bce3898cfcd"
+                  },
+                  {
+                      "path":  "Normal-Startup.cmd",
+                      "bytes":  120,
+                      "sha256":  "67b09924552ca13688dfff48878537d748fa58f4b06944ad89ba768e3866ab82"
+                  },
+                  {
+                      "path":  "README.md",
+                      "bytes":  5961,
+                      "sha256":  "0b17673d82f4a567a8e484b42e46884aebed31584ad5f63377c59c615d9c944d"
+                  },
+                  {
+                      "path":  "scripts/Build.ps1",
+                      "bytes":  1632,
+                      "sha256":  "f18de51aa3bd84d515f6e0934e9ac5fe2eb2e21c66672f326f0e106f09312b51"
+                  },
+                  {
+                      "path":  "scripts/Build-Manager.ps1",
+                      "bytes":  902,
+                      "sha256":  "02a889df5e4f2006e00af98e7d8484de8ef6ac74ac56850254c7e2c6b8e08124"
+                  },
+                  {
+                      "path":  "scripts/Build-Release.ps1",
+                      "bytes":  3352,
+                      "sha256":  "fe6735415d2042193d64e2787f2677eee0e217482b4f0d268611d7ad28b930e5"
+                  },
+                  {
+                      "path":  "scripts/Ensure-Node.ps1",
+                      "bytes":  2971,
+                      "sha256":  "7f5e5ade1d9ca8b6a57e11bc286c70c19b1d07821dea5cdb31c1fbaee5648930"
+                  },
+                  {
+                      "path":  "scripts/Import-Animation.ps1",
+                      "bytes":  2220,
+                      "sha256":  "6cc3a9e4ce87d8a8f827849370d0484bfc9d03cf01ca2c1259a9790e895923c6"
+                  },
+                  {
+                      "path":  "scripts/integrate-entrypoints.ps1",
+                      "bytes":  15604,
+                      "sha256":  "a6eb1273453022c47d35cb3248be8ef6328f647adf92542e726e8e7452d89c43"
+                  },
+                  {
+                      "path":  "scripts/Manager-Action.ps1",
+                      "bytes":  1323,
+                      "sha256":  "f6daef16359ac270fcf915831174b25698311ed39ae644767b2f5fa348065037"
+                  },
+                  {
+                      "path":  "scripts/manager-window.xaml",
+                      "bytes":  3525,
+                      "sha256":  "3394f4c4b802a37925b3ad3251be76c9cf98bfe6ca1b087f92ac8d3fd0b7e280"
+                  },
+                  {
+                      "path":  "scripts/Package-Common.ps1",
+                      "bytes":  3402,
+                      "sha256":  "ba25f5936c12c939d7366d2034a122b14dea87af1d74b90b723a2baf5ef85b09"
+                  },
+                  {
+                      "path":  "scripts/Set-StartupMode.ps1",
+                      "bytes":  1199,
+                      "sha256":  "0c5f54047de5c2c2eb01c179cea5e3780bbcb056c744f59e6aea91dd1058ad94"
+                  },
+                  {
+                      "path":  "scripts/Test-Package.ps1",
+                      "bytes":  3110,
+                      "sha256":  "e02eb6870ad4fca4f9b91650b2a8b220c32a9bec9ac6faf6b68ba6b1ffaba1ab"
+                  },
+                  {
+                      "path":  "scripts/Theme-Library.ps1",
+                      "bytes":  7210,
+                      "sha256":  "17448945f18c3c5e0484946284b76d841e206f39a8828eabe547d1f1855dc384"
+                  },
+                  {
+                      "path":  "scripts/Theme-Manager.ps1",
+                      "bytes":  154,
+                      "sha256":  "2b2423db99741af6229efff340f363d364616ad001a32fb3d2485abe8f5a068d"
+                  },
+                  {
+                      "path":  "scripts/Uninstall.ps1",
+                      "bytes":  2309,
+                      "sha256":  "8ce4b7a6e4f11731bb9a036752fa8139e21335a402faf8bb33e9679026ea0afb"
+                  },
+                  {
+                      "path":  "scripts/Update-Manifest.ps1",
+                      "bytes":  699,
+                      "sha256":  "4297119cb0ab18551bf991128b2202b041d58c8b4e16aed6a1b8526e36e3415b"
+                  },
+                  {
+                      "path":  "scripts/Wait-DragonSkinReady.mjs",
+                      "bytes":  7571,
+                      "sha256":  "d9e68c4f50647fdc58b7935f508c0b4288a647b210c3b0c559d0c8c9590b19f2"
+                  },
+                  {
+                      "path":  "scripts/Wait-DragonSkinReady.ps1",
+                      "bytes":  10862,
+                      "sha256":  "2feffb45cc5a269171a7aefa3a869bf30f184ad7e142e2bdee8414405eacd44b"
+                  },
+                  {
+                      "path":  "src/app.manifest",
+                      "bytes":  687,
+                      "sha256":  "576a60af5f7df9e9fd98d9af3662aa3f1c2cef7763852dbdce5619a3e4f0b2c8"
+                  },
+                  {
+                      "path":  "src/DragonCodexBoot.cs",
+                      "bytes":  33609,
+                      "sha256":  "a240a209043a087e1186f06847d5243216f3dafddd72f793f23071d53a4c62a3"
+                  },
+                  {
+                      "path":  "src/DragonStudio.cs",
+                      "bytes":  7312,
+                      "sha256":  "3cf866d48e2fb7047ae82931b88d50a21e664e8683c22180b72042106fd6a567"
+                  },
+                  {
+                      "path":  "tests/AppearanceTests.ps1",
+                      "bytes":  1995,
+                      "sha256":  "3e465835ff0966775a671232fdce045ee0ea626c87358bfc29763e062cec9bdb"
+                  },
+                  {
+                      "path":  "tests/EntrypointTests.ps1",
+                      "bytes":  8204,
+                      "sha256":  "4eb90297d5c23cc1b07199bb56da165c417a2dd140aec877868929f4fe251d16"
+                  },
+                  {
+                      "path":  "tests/PayloadTests.mjs",
+                      "bytes":  885,
+                      "sha256":  "5dba6fc0cec1808f0fefaee9ae2dcd90d2ba7db2de2e11b642dda953f1919dd9"
+                  },
+                  {
+                      "path":  "tests/SecurityTests.mjs",
+                      "bytes":  1222,
+                      "sha256":  "e78b75bf28432a4a99228de0daf61032c9c83492d5830a162a34302f3aa845ec"
+                  },
+                  {
+                      "path":  "tests/StartupModeTests.ps1",
+                      "bytes":  2115,
+                      "sha256":  "2529f84db20a3d5e689746dbd3bb13eabb50b4197fae2deae124c32d11823eaf"
+                  },
+                  {
+                      "path":  "tests/Test-StartupIdentity.ps1",
+                      "bytes":  1364,
+                      "sha256":  "1e9c8c88e9fb06366f50c4bc325e0a9db0b86a5fd0a9a144f307aff5cdd3fe0a"
+                  },
+                  {
+                      "path":  "tests/ThemeLibraryTests.ps1",
+                      "bytes":  2679,
+                      "sha256":  "3f4de716a810cf5e81e20b6da44bf0f85d5779f63ae676cdd1c29e982db63a9f"
+                  },
+                  {
+                      "path":  "Theme-Manager.cmd",
+                      "bytes":  43,
+                      "sha256":  "2cb5b47c2a7d3d7b8038285cdd74d83a1875808a8f4c5690ecfa703be6d73254"
+                  },
+                  {
+                      "path":  "themes/dragon/MEDIA_NOTICE.md",
+                      "bytes":  655,
+                      "sha256":  "21b270c974b103f0b2010293fbc955d32a7e563d5385892db56ae7e6b90e75f8"
+                  },
+                  {
+                      "path":  "themes/dragon/theme.json",
+                      "bytes":  1303,
+                      "sha256":  "b3be02183c7bee94571454c483a1bb0de4311394cebd56c20a6d6a18f60613ba"
+                  },
+                  {
+                      "path":  "themes/dragon/wallpaper.mp4",
+                      "bytes":  8103029,
+                      "sha256":  "f6e71db898f3f731d1bff214be1954b2b42f693386f73a7bfa1661d0dc7d7d8e"
+                  },
+                  {
+                      "path":  "THIRD_PARTY_NOTICES.md",
+                      "bytes":  2866,
+                      "sha256":  "b7e04437ace91de058a13df02c1e66051b811f0c36455d941fda9cee3b63e970"
+                  },
+                  {
+                      "path":  "tools/Build-DragonContinuity.py",
+                      "bytes":  3579,
+                      "sha256":  "5503bfd454d9361002624b1fbbc95e3c83c900f51c13c091f27a2400c5ac2729"
+                  },
+                  {
+                      "path":  "tools/Optimize-DragonWallpaper.py",
+                      "bytes":  3957,
+                      "sha256":  "6f7c821a276dbaca77bdc918a982cb2021770a5a25cfcbecac97bbb5473ac2e9"
+                  },
+                  {
+                      "path":  "tools/README.md",
+                      "bytes":  895,
+                      "sha256":  "5f095ddb39a9c0d57ed41e6b4fe3ffb372b29ad9f3bc89a76d650cecb06c94f1"
+                  },
+                  {
+                      "path":  "tools/requirements.txt",
+                      "bytes":  48,
+                      "sha256":  "ae9d6b23c9d52b4664852028864ee6c309b790db9c996ba22f0508cb1aa85588"
+                  },
+                  {
+                      "path":  "Uninstall.cmd",
+                      "bytes":  232,
+                      "sha256":  "b22a814d97405f88633bc7738a3a714629a2cf8c9b5f0a1ff832802c01e817b8"
+                  },
+                  {
+                      "path":  "VERSION",
+                      "bytes":  17,
+                      "sha256":  "8904b49b5cba964ad2c5c4c3bb9ea3847f30a83fdfdb32a834a93a8b6e2fd290"
+                  },
+                  {
+                      "path":  "Wallpaper-Startup.cmd",
+                      "bytes":  123,
+                      "sha256":  "823bbddc359e0e0688dd298675f2a240c332194c13f0053e4a79615e49273785"
+                  }
+              ]
+}

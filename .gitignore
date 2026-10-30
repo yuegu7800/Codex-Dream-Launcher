@@ -1,14 +1,15 @@
-# Generated binaries and runtime state
-**/build/
-*.exe
-*.ico
-*.log
-
-# Local wallpaper choices
-**/assets/*.jpg
-**/assets/*.jpeg
-**/assets/*.png
-**/assets/*.bmp
-
-# Local helper output
-**/icon-source/
+.local/
+releases/
+engine/runtime/
+DragonCodexBoot.exe
+launcher.json
+skin/
+state/
+logs/
+qa/
+.integration/
+backups/
+install-state.json
+*.user
+*.pyc
+__pycache__/
