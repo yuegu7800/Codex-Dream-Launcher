@@ -40,7 +40,7 @@ function Get-DragonVideos([string]$Root) {
             $name = $file.BaseName.Substring(0,12)
             $meta = Join-Path $store ($file.BaseName+'.json')
             if (Test-Path -LiteralPath $meta) {
-                try { $name = [string](Get-Content -LiteralPath $meta -Raw | ConvertFrom-Json).name } catch {}
+                try { $name = [string](Get-Content -LiteralPath $meta -Encoding UTF8 -Raw | ConvertFrom-Json).name } catch {}
             }
             [pscustomobject]@{Name=$name;Path=$file.FullName;Id=$file.BaseName}
         }
@@ -84,7 +84,7 @@ function Set-DragonTheme([string]$Root,[string]$VideoId,[string]$PresetId,[int]$
     $store = Initialize-DragonLibrary $Root
     $themeDir = Assert-DragonOrdinaryPath (Join-Path $Root 'themes\dragon')
     $configPath = Join-Path $themeDir 'theme.json'
-    $baseline = Get-Content -LiteralPath (Join-Path $store 'baseline.json') -Raw | ConvertFrom-Json
+    $baseline = Get-Content -LiteralPath (Join-Path $store 'baseline.json') -Encoding UTF8 -Raw | ConvertFrom-Json
     $config = $baseline
     $config.name = $preset[0].Name
     $config.colors.accent = $preset[0].Accent
@@ -109,7 +109,7 @@ function Set-DragonTheme([string]$Root,[string]$VideoId,[string]$PresetId,[int]$
         Copy-Item -LiteralPath $configPath -Destination (Join-Path $backup ('theme-'+[guid]::NewGuid().ToString('N')+'.json'))
         # Existing per-theme preferences take precedence over media.opacity.
         $prefPath = Assert-DragonOrdinaryPath (Join-Path $Root 'skin\theme-preferences.json')
-        $prefs = if (Test-Path -LiteralPath $prefPath) {Get-Content -LiteralPath $prefPath -Raw | ConvertFrom-Json} else {[pscustomobject]@{schemaVersion=1;themes=[pscustomobject]@{}}}
+        $prefs = if (Test-Path -LiteralPath $prefPath) {Get-Content -LiteralPath $prefPath -Encoding UTF8 -Raw | ConvertFrom-Json} else {[pscustomobject]@{schemaVersion=1;themes=[pscustomobject]@{}}}
         $prefs.themes | Add-Member -NotePropertyName $config.id -NotePropertyValue @{transparency=$Reveal} -Force
         Write-DragonThemeJson $prefPath $prefs
         Write-DragonThemeJson $configPath $config

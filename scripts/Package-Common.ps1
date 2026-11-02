@@ -1,4 +1,4 @@
-$ErrorActionPreference = 'Stop'
+﻿$ErrorActionPreference = 'Stop'
 
 function Write-DragonJson([string]$Path, $Value) {
     $parent = Split-Path -Parent $Path
@@ -29,8 +29,8 @@ function Assert-DragonOrdinaryPath([string]$Path) {
 }
 
 function Get-DragonPackageFiles([string]$Root) {
-    $top = @('src','scripts','config','media','themes','licenses','tests','docs','tools','.github')
-    $leaves = @('Install.ps1','Install.cmd','Uninstall.cmd','Normal-Startup.cmd','Wallpaper-Startup.cmd','Theme-Manager.cmd','README.md','AGENTS.md',
+    $top = @('src','scripts','config','media','themes','licenses','tests','docs','tools','.github','wallpaper-library')
+    $leaves = @('Install.ps1','Install.cmd','Uninstall.cmd','Normal-Startup.cmd','Wallpaper-Startup.cmd','Theme-Manager.cmd','Wallpaper-Library.cmd','README.md','AGENTS.md',
         'DEPLOY_WITH_GPT.md','LICENSE','THIRD_PARTY_NOTICES.md','VERSION','.gitignore','.gitattributes')
     foreach ($name in $leaves) {
         $path = Join-Path $Root $name
@@ -40,7 +40,7 @@ function Get-DragonPackageFiles([string]$Root) {
     foreach ($name in $top + @('engine\assets','engine\scripts')) {
         $dir = Join-Path $Root $name
         if (!(Test-Path -LiteralPath $dir -PathType Container)) { throw "Missing package directory: $name" }
-        Get-ChildItem -LiteralPath $dir -File -Recurse
+        Get-ChildItem -LiteralPath $dir -File -Recurse | Where-Object { !$_.FullName.StartsWith((Join-Path $Root 'wallpaper-library\data\'),[StringComparison]::OrdinalIgnoreCase) }
     }
 }
 

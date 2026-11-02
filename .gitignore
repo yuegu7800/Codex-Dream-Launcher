@@ -2,7 +2,7 @@
 releases/
 engine/runtime/
 DragonCodexBoot.exe
-launcher.json
+/launcher.json
 skin/
 state/
 logs/
@@ -13,3 +13,6 @@ install-state.json
 *.user
 *.pyc
 __pycache__/
+
+DragonStudio.exe
+wallpaper-library/data/

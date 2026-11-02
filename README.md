@@ -70,3 +70,7 @@ Portable 只用于文件准备/验证，运行时仍需要官方 Codex，并应�
 - **视频、角色、美术和声音不自动适用 MIT。当前壁纸的独立再分发授权尚未核实；公开发布前确认授权，或换成你有权分发的素材。**
 
 完整来源、修改和素材说明见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) 与 [变更说明](docs/CHANGES.md)。包内不包含 Codex 本体、个人账号、聊天历史或作者电脑的登录资料。
+
+## Wallpaper Engine 本地素材库
+
+新增本地壁纸库扫描、搜索、预览、导出自动加入管理器，支持图片/GIF/其他视频转为兼容 MP4。安装后运行 Wallpaper-Library.cmd。配色预设不再重置壁纸透出值，并修复 Windows PowerShell 5.1 中文素材名乱码。纯场景包尚不播放。详见 [素材库说明](wallpaper-library/README.md)。

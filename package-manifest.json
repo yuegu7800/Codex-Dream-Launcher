@@ -14,13 +14,18 @@
                   },
                   {
                       "path":  ".gitignore",
-                      "bytes":  159,
-                      "sha256":  "6a741a09de4e1f1f17b7e3fcf9f3efb0db3185f19b01fc90f4b093fea93b2ac1"
+                      "bytes":  202,
+                      "sha256":  "00e223fcee749539b63b5306509f2ff642fea78099d29feb2b10b85d5cbc04ea"
                   },
                   {
                       "path":  "AGENTS.md",
                       "bytes":  2767,
                       "sha256":  "ca948a3fc3bc792fb7a56adeb9a5329fcd66981eb1856547ea793d40df3d0d6f"
+                  },
+                  {
+                      "path":  "config/launcher.json",
+                      "bytes":  1094,
+                      "sha256":  "b4c1d179ea11a0ee7b4ea6243674aaaa03ab0ca731965d5eba93cb0c8f070dd1"
                   },
                   {
                       "path":  "DEPLOY_WITH_GPT.md",
@@ -59,8 +64,8 @@
                   },
                   {
                       "path":  "docs/THEME-MANAGER.md",
-                      "bytes":  1414,
-                      "sha256":  "79eac97932f8fbd75324899ef266e9a81b0faa7ad04311a8f4b19fa81a9dd6df"
+                      "bytes":  1659,
+                      "sha256":  "60007aeb4d21495c6e67c788729353fb150f682031f185457693b9e79a947eec"
                   },
                   {
                       "path":  "engine/assets/compat-profile-client.mjs",
@@ -139,8 +144,8 @@
                   },
                   {
                       "path":  "Install.ps1",
-                      "bytes":  7603,
-                      "sha256":  "9681e2c31d61c9060da793db90c7ce43a4ee21e5d7fd8c4b810dfa3980cb0057"
+                      "bytes":  8901,
+                      "sha256":  "52437d872f64ab7857b1571d38a70e046c3ab6de2bd15583ccaac5461f3bc24e"
                   },
                   {
                       "path":  "LICENSE",
@@ -179,8 +184,8 @@
                   },
                   {
                       "path":  "README.md",
-                      "bytes":  5961,
-                      "sha256":  "0b17673d82f4a567a8e484b42e46884aebed31584ad5f63377c59c615d9c944d"
+                      "bytes":  6348,
+                      "sha256":  "fb73f7317ceceacd2570742fd1fb6ca74ae734a47bd25ec46ffe66e04e8e4f84"
                   },
                   {
                       "path":  "scripts/Build.ps1",
@@ -219,13 +224,13 @@
                   },
                   {
                       "path":  "scripts/manager-window.xaml",
-                      "bytes":  3525,
-                      "sha256":  "3394f4c4b802a37925b3ad3251be76c9cf98bfe6ca1b087f92ac8d3fd0b7e280"
+                      "bytes":  3858,
+                      "sha256":  "25d485b1a0ff5a9de43117bf79f0471e1e12c5276e48f9636fd5e154b5d237f8"
                   },
                   {
                       "path":  "scripts/Package-Common.ps1",
-                      "bytes":  3402,
-                      "sha256":  "ba25f5936c12c939d7366d2034a122b14dea87af1d74b90b723a2baf5ef85b09"
+                      "bytes":  3575,
+                      "sha256":  "6284425c96d77189c8ab41ad6bb29059c658015a093979899afe12daf8a75d00"
                   },
                   {
                       "path":  "scripts/Set-StartupMode.ps1",
@@ -239,8 +244,8 @@
                   },
                   {
                       "path":  "scripts/Theme-Library.ps1",
-                      "bytes":  7210,
-                      "sha256":  "17448945f18c3c5e0484946284b76d841e206f39a8828eabe547d1f1855dc384"
+                      "bytes":  7255,
+                      "sha256":  "6d7aa48266ece513a4a91319ab8649e06340fcc3131447a7dbac8ede1146a08c"
                   },
                   {
                       "path":  "scripts/Theme-Manager.ps1",
@@ -279,8 +284,8 @@
                   },
                   {
                       "path":  "src/DragonStudio.cs",
-                      "bytes":  7312,
-                      "sha256":  "3cf866d48e2fb7047ae82931b88d50a21e664e8683c22180b72042106fd6a567"
+                      "bytes":  8627,
+                      "sha256":  "34bcd7d164f9611d16340e7cc112e7c108aa6de4b4b36281526bd9ab00f47a0e"
                   },
                   {
                       "path":  "tests/AppearanceTests.ps1",
@@ -371,6 +376,51 @@
                       "path":  "VERSION",
                       "bytes":  17,
                       "sha256":  "8904b49b5cba964ad2c5c4c3bb9ea3847f30a83fdfdb32a834a93a8b6e2fd290"
+                  },
+                  {
+                      "path":  "Wallpaper-Library.cmd",
+                      "bytes":  114,
+                      "sha256":  "5f9fdd11bbbaf10ca9dd50236e46c6b2b96b3c922acbd7cb1914f7cab49cb83f"
+                  },
+                  {
+                      "path":  "wallpaper-library/.gitignore",
+                      "bytes":  6,
+                      "sha256":  "c5049c183f87267ff36ee98b52517e1f78670639f3a060baa89d4093a555f59b"
+                  },
+                  {
+                      "path":  "wallpaper-library/Library.ps1",
+                      "bytes":  9533,
+                      "sha256":  "c4c66a0a59e644c5be8a267a5f66d9334f040b02d5c239b1b2c727b7dec302c6"
+                  },
+                  {
+                      "path":  "wallpaper-library/README.md",
+                      "bytes":  3353,
+                      "sha256":  "da8ab79c41785270980cfbd14e400e8c48970dae82271c5cb570070aee66d767"
+                  },
+                  {
+                      "path":  "wallpaper-library/Start-Library.ps1",
+                      "bytes":  9599,
+                      "sha256":  "3750b4ccf5e6dc48826f4e9343aeddff64501ff21ca96278047e1308b886aea8"
+                  },
+                  {
+                      "path":  "wallpaper-library/Test-Library.ps1",
+                      "bytes":  2777,
+                      "sha256":  "47785afedb403b898dba6c1f96766c192338200accac8c30637cbc2046068289"
+                  },
+                  {
+                      "path":  "wallpaper-library/Test-Transfer.ps1",
+                      "bytes":  2215,
+                      "sha256":  "47edbdc2e79d068fd1a3e7a383ef8c83bff8efb76f64791fe18a7abe827a39ab"
+                  },
+                  {
+                      "path":  "wallpaper-library/Test-Unicode.ps1",
+                      "bytes":  736,
+                      "sha256":  "943baec94c521d3e9ef72a93e390246a0c4dcd901330541f2d91a02550d0a5eb"
+                  },
+                  {
+                      "path":  "wallpaper-library/Transfer.ps1",
+                      "bytes":  6792,
+                      "sha256":  "da3311246134ca5faf0c185882e8dc6e907c5b9ae00152ac87af8b146d727d50"
                   },
                   {
                       "path":  "Wallpaper-Startup.cmd",

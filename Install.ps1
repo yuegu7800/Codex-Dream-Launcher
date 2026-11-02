@@ -1,4 +1,4 @@
-[CmdletBinding()]
+﻿[CmdletBinding()]
 param(
     [string]$InstallDir = (Join-Path $env:LOCALAPPDATA 'DragonCodexBoot-Community'),
     [switch]$Offline,
@@ -43,8 +43,8 @@ foreach ($dir in @('scripts','engine','themes','media','licenses')) {
     New-Item -ItemType Directory -Path (Join-Path $stage $dir) -Force | Out-Null
 }
 foreach ($file in $manifest.files) {
-    if ($file.path -match '^(scripts|engine|themes|media|licenses)/' -or
-        $file.path -in @('LICENSE','THIRD_PARTY_NOTICES.md','VERSION','Uninstall.cmd','Normal-Startup.cmd','Wallpaper-Startup.cmd','Theme-Manager.cmd')) {
+    if ($file.path -match '^(scripts|engine|themes|media|licenses|wallpaper-library)/' -or
+        $file.path -in @('LICENSE','THIRD_PARTY_NOTICES.md','VERSION','Uninstall.cmd','Normal-Startup.cmd','Wallpaper-Startup.cmd','Theme-Manager.cmd','Wallpaper-Library.cmd')) {
         $destination = Join-Path $stage $file.path
         New-Item -ItemType Directory -Path (Split-Path -Parent $destination) -Force | Out-Null
         Copy-Item -LiteralPath (Join-Path $repoRoot $file.path) -Destination $destination -Force
@@ -69,7 +69,7 @@ if ($existingState) {
     # Preserve the complete previous managed payload; profiles/state are never replaced.
     $backup = Join-Path $target ('backups\payload-' + (Get-Date -Format 'yyyyMMdd-HHmmss') + '-' + [guid]::NewGuid().ToString('N').Substring(0,8))
     New-Item -ItemType Directory -Path $backup -Force | Out-Null
-    foreach ($name in @('scripts','engine','themes','media','licenses','DragonCodexBoot.exe','launcher.json','install-state.json','Uninstall.cmd')) {
+    foreach ($name in @('scripts','engine','themes','media','licenses','DragonCodexBoot.exe','DragonStudio.exe','wallpaper-library','Wallpaper-Library.cmd','launcher.json','install-state.json','Uninstall.cmd')) {
         if (Test-Path -LiteralPath (Join-Path $target $name)) { Copy-Item -LiteralPath (Join-Path $target $name) -Destination $backup -Recurse }
     }
     $priorWatcher = Read-DreamSkinState -Path (Join-Path $target 'skin\state.json')
@@ -101,6 +101,20 @@ if (!$Portable -and !$NoAppearance -and
 }
 if (!$Portable -and !$NoShortcuts) {
     $null = & (Join-Path $target 'scripts\integrate-entrypoints.ps1') -Action Install -AppRoot $target -OfficialExecutablePaths @($codex.Executable) -ScanBudgetSeconds 30
+    $shortcutShell=New-Object -ComObject WScript.Shell
+    $desktop=[Environment]::GetFolderPath('Desktop')
+    foreach($entry in @(@('Dragon Studio 主题管理器.lnk',(Join-Path $target 'DragonStudio.exe'),''),@('Dragon Wallpaper 壁纸素材库.lnk',(Join-Path $env:WINDIR 'System32\WindowsPowerShell\v1.0\powershell.exe'),('-NoProfile -STA -WindowStyle Hidden -ExecutionPolicy Bypass -File "'+(Join-Path $target 'wallpaper-library\Start-Library.ps1')+'"')))) {
+        $linkPath=Join-Path $desktop $entry[0]
+        if(Test-Path -LiteralPath $linkPath) {
+            $linkBackup=Join-Path $target ('backups\shortcut-'+[guid]::NewGuid().ToString('N')+'.lnk')
+            New-Item -ItemType Directory -Path (Split-Path $linkBackup) -Force|Out-Null
+            Copy-Item -LiteralPath $linkPath -Destination $linkBackup
+        }
+        $link=$shortcutShell.CreateShortcut($linkPath)
+        $link.TargetPath=$entry[1];$link.Arguments=$entry[2];$link.WorkingDirectory=$target;$link.Save()
+        $verified=$shortcutShell.CreateShortcut($linkPath)
+        if($verified.TargetPath -ine $entry[1] -or $verified.Arguments -cne $entry[2]){throw 'Manager shortcut verification failed.'}
+    }
     $report = Get-Content -LiteralPath (Join-Path $target '.integration\report.json') -Encoding UTF8 -Raw | ConvertFrom-Json
     if ($report.Errors.Count -gt 0 -or ($report.Replaced + $report.Created + $report.AlreadyOwned) -eq 0) {
         throw "Payload installed, but shortcut setup needs attention. See $target\.integration\report.json"
