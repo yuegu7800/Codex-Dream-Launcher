@@ -22,7 +22,6 @@ if (!$selfTest.ok -or $selfTest.geometryCases -ne 605 -or $selfTest.fixedPlaceme
 & (Join-Path $root 'tests\AppearanceTests.ps1')
 & (Join-Path $root 'tests\StartupModeTests.ps1')
 & (Join-Path $root 'tests\StaleWatcherTests.ps1')
-& (Join-Path $root 'tests\ThemeLibraryTests.ps1')
 . (Join-Path $root 'engine\scripts\common-windows.ps1')
 if ($NodePath) {
     $runtime = Get-DreamSkinValidatedNodeRuntime -Path $NodePath
@@ -37,6 +36,7 @@ if ($NodePath) {
         $runtime = & (Join-Path $PSScriptRoot 'Ensure-Node.ps1') -EngineRoot (Join-Path $root 'engine') -Offline
     }
 }
+& (Join-Path $root 'tests\ThemeLibraryTests.ps1') -NodePath $runtime.Path
 foreach ($file in $manifest.files | Where-Object { $_.path -match '\.(mjs|js)$' }) {
     & $runtime.Path --check (Join-Path $root $file.path)
     if ($LASTEXITCODE -ne 0) { throw "JavaScript parse failure: $($file.path)" }

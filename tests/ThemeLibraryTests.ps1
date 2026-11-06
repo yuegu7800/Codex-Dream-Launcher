@@ -1,4 +1,5 @@
-﻿$ErrorActionPreference='Stop'
+﻿param([Parameter(Mandatory=$true)][string]$NodePath)
+$ErrorActionPreference='Stop'
 $repo=Split-Path -Parent $PSScriptRoot
 . (Join-Path $repo 'scripts\Theme-Library.ps1')
 $fixture=Join-Path $repo ('.local\library-'+[guid]::NewGuid().ToString('N'))
@@ -6,8 +7,7 @@ foreach($dir in @('themes\dragon','engine\scripts','engine\assets','engine\runti
 Copy-Item (Join-Path $repo 'themes\dragon\*') (Join-Path $fixture 'themes\dragon')
 Copy-Item (Join-Path $repo 'engine\scripts\*') (Join-Path $fixture 'engine\scripts')
 Copy-Item (Join-Path $repo 'engine\assets\*') (Join-Path $fixture 'engine\assets')
-$runtime='C:\Users\ZhuanZ\AppData\Local\Packages\OpenAI.Codex_2p2nqsd0c76g0\LocalCache\Local\DragonCodexBoot-Community\engine\runtime\node\node.exe'
-Copy-Item $runtime (Join-Path $fixture 'engine\runtime\node\node.exe')
+Copy-Item $NodePath (Join-Path $fixture 'engine\runtime\node\node.exe')
 $video=Join-Path $fixture 'themes\dragon\wallpaper.mp4'
 $original=(Get-FileHash (Join-Path $fixture 'themes\dragon\theme.json')).Hash
 $id=Import-DragonVideo $fixture $video

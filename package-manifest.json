@@ -249,8 +249,8 @@
                   },
                   {
                       "path":  "scripts/Test-Package.ps1",
-                      "bytes":  3160,
-                      "sha256":  "6fe9ab6463d3455126520734c5e167f892f69024815ac94430fd8ebd6b23141d"
+                      "bytes":  3184,
+                      "sha256":  "018a4d6f4afdcac50ecf362b83ba00d191f31dccf2445d6b6c6136cf53ff9951"
                   },
                   {
                       "path":  "scripts/Theme-Library.ps1",
@@ -334,8 +334,8 @@
                   },
                   {
                       "path":  "tests/ThemeLibraryTests.ps1",
-                      "bytes":  2679,
-                      "sha256":  "3f4de716a810cf5e81e20b6da44bf0f85d5779f63ae676cdd1c29e982db63a9f"
+                      "bytes":  2585,
+                      "sha256":  "38e8645614108d773098637eb48a26fb242bae8ba0fa5833f24fa3b25605449d"
                   },
                   {
                       "path":  "Theme-Manager.cmd",
