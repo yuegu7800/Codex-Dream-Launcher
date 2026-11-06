@@ -21,6 +21,7 @@ if (!$selfTest.ok -or $selfTest.geometryCases -ne 605 -or $selfTest.fixedPlaceme
 & (Join-Path $root 'tests\EntrypointTests.ps1')
 & (Join-Path $root 'tests\AppearanceTests.ps1')
 & (Join-Path $root 'tests\StartupModeTests.ps1')
+& (Join-Path $root 'tests\StaleWatcherTests.ps1')
 & (Join-Path $root 'tests\ThemeLibraryTests.ps1')
 . (Join-Path $root 'engine\scripts\common-windows.ps1')
 if ($NodePath) {

@@ -195,7 +195,11 @@ try {
   # Failure is distinct from decoded-video readiness. The launcher may reveal
   # the ordinary client, but must never report this as a ready wallpaper.
   Set-Content -LiteralPath ($ReadyFile + '.failed') -Value $_.Exception.Message -Encoding UTF8
-  if ($codex -and $codex.AppUserModelId) {
+  # A failed wallpaper setup may already have launched Codex. Shell activation
+  # in that case can create a second window and must not be used as fallback.
+  if ($codex -and $codex.AppUserModelId -and
+      !$appProcessId -and !$identity -and
+      @(Get-DreamSkinCodexProcesses -Codex $codex).Count -eq 0) {
     Start-Process -FilePath 'explorer.exe' -ArgumentList ('shell:AppsFolder\' + $codex.AppUserModelId)
   }
   exit 1

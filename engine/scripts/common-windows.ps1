@@ -1391,6 +1391,16 @@ function Stop-DreamSkinRecordedInjector {
   $processId = [int]$State.injectorPid
   $processHandle = Get-Process -Id $processId -ErrorAction SilentlyContinue
   if (-not $processHandle) { return $true }
+  # Windows reuses PIDs. A positively different process is not ours to stop,
+  # and must not prevent a new watcher from starting. Unknown identity still
+  # fails closed below; never terminate the replacement process.
+  if ($processHandle.ProcessName -ine 'node') { return $true }
+  if ($State.injectorStartedAt) {
+    try {
+      $savedStart = [DateTimeOffset]::Parse("$($State.injectorStartedAt)").UtcDateTime
+      if ($processHandle.StartTime.ToUniversalTime() -ne $savedStart) { return $true }
+    } catch { }
+  }
   $process = Get-CimInstance Win32_Process -Filter "ProcessId = $processId" -ErrorAction SilentlyContinue
   if (-not $process) {
     if ($processHandle.HasExited) { return $true }

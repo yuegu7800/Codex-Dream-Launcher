@@ -916,7 +916,7 @@ html[data-dream-skin="active"] :is(.composer-surface-chrome, [class*="_ComposerL
    data-ds-part="composer", while this internal native layer stays
    transparent so base and Community Safe CSS paint the same node. */
 html[data-dream-skin="active"] :is(.composer-surface-chrome, [class*="_ComposerLayoutRoot_"], [data-composer-surface-variant][data-composer-radius-variant])[data-composer-utility-bar-variant="home"]
-  > [class*="_ComposerLayoutBody_"] {
+  > :is([data-composer-body], [class*="_ComposerLayoutBody_"]) {
   background: transparent !important;
   border: 0 !important;
   box-shadow: none !important;
@@ -926,7 +926,7 @@ html[data-dream-skin="active"] :is(.composer-surface-chrome, [class*="_ComposerL
 /* Keep the public ComposerLayoutRoot as the single thread surface too. The
    canonical 26.814+ contract maps that Root, so clear only nested paint. */
 html[data-dream-skin="active"] [data-codex-composer-root][data-composer-placement="thread"]
-  :is(.composer-surface-chrome, [class*="_ComposerLayoutRoot_"], [data-composer-surface-variant][data-composer-radius-variant]) > [class*="_ComposerLayoutBody_"] {
+  :is(.composer-surface-chrome, [class*="_ComposerLayoutRoot_"], [data-composer-surface-variant][data-composer-radius-variant]) > :is([data-composer-body], [class*="_ComposerLayoutBody_"]) {
   background: transparent !important;
   border: 0 !important;
   box-shadow: none !important;
@@ -1633,7 +1633,7 @@ html[data-dream-skin="active"][style*="--ds-upload-panel-alpha:"] [data-ds-part=
   background: rgb(var(--ds-panel-rgb) / var(--ds-upload-panel-alpha)) !important;
 }
 html[data-dream-skin="active"][style*="--ds-upload-panel-alpha:"]
-  [data-ds-part="composer"] [class*="_ComposerLayoutBody_"],
+  [data-ds-part="composer"] :is([data-composer-body], [class*="_ComposerLayoutBody_"]),
 html[data-dream-skin="active"][style*="--ds-upload-panel-alpha:"]
   [data-ds-part="composer"] [data-ds-part="composer-toolbar"] {
   background: transparent !important;
@@ -1828,13 +1828,15 @@ html[data-dream-skin="active"][data-codex-os="win32"][data-codex-window-chrome="
 html[data-dream-skin="active"][data-codex-os="win32"][data-codex-window-chrome="application-menu"]
   [data-app-shell-main-surface],
 html[data-dream-skin="active"][data-codex-os="win32"][data-codex-window-chrome="application-menu"]
-  [data-app-shell-workspace-row] > aside.app-shell-left-panel {
+  [data-app-shell-workspace-row] > aside.app-shell-left-panel,
+html[data-dream-skin="active"][data-codex-os="win32"][data-codex-window-chrome="application-menu"]
+  [data-app-shell-workspace-row] > [data-app-shell-workspace] > aside.app-shell-left-panel {
   margin-top: 0 !important;
 }
 
 /* Do not blur the wallpaper a second time through the Windows menu bar. */
 html[data-dream-skin="active"][data-codex-os="win32"][data-codex-window-chrome="application-menu"]
-  :is([class~="group/application-menu-top-bar"], [class*="_ApplicationMenuTopBar_"]) {
+  :is([class~="group/application-menu-top-bar"], [class*="_ApplicationMenuTopBar_"], [class^="ApplicationMenuTopBar-"], [class*=" ApplicationMenuTopBar-"]) {
   backdrop-filter: none !important;
   box-shadow: none !important;
 }
@@ -1846,7 +1848,8 @@ html[data-dream-skin="active"][data-codex-os="win32"][data-codex-window-chrome="
 @layer properties {
   html[data-dream-skin="active"][data-codex-os="win32"][data-codex-window-chrome="application-menu"]
     [data-app-shell-frame][data-app-shell-sidebar-open="true"][data-app-shell-responsive-sidebar="false"][data-app-shell-docking-peek="false"]
-    [data-app-shell-workspace-row] > aside.app-shell-left-panel {
+    :is([data-app-shell-workspace-row] > aside.app-shell-left-panel,
+      [data-app-shell-workspace-row] > [data-app-shell-workspace] > aside.app-shell-left-panel) {
     border-top-right-radius: 0 !important;
     border-bottom-right-radius: 0 !important;
   }
@@ -1860,8 +1863,8 @@ html[data-dream-skin="active"][data-codex-os="win32"][data-codex-window-chrome="
   /* Continue the main scrim through the Windows menu strip, without an
      extra accent-colored horizontal seam. Keep its native height/controls. */
   html[data-dream-skin="active"][data-codex-os="win32"][data-codex-window-chrome="application-menu"]
-    :is([class~="group/application-menu-top-bar"], [class*="_ApplicationMenuTopBar_"]) {
-    background: rgb(var(--ds-bg-rgb) / var(--ds-upload-bg-alpha, .7)) !important;
+    :is([class~="group/application-menu-top-bar"], [class*="_ApplicationMenuTopBar_"], [class^="ApplicationMenuTopBar-"], [class*=" ApplicationMenuTopBar-"]) {
+    background: var(--ds-titlebar-mid, rgb(var(--ds-bg-rgb) / var(--ds-upload-bg-alpha, .7))) !important;
     border-bottom-color: transparent !important;
     box-shadow: none !important;
   }
@@ -1869,5 +1872,19 @@ html[data-dream-skin="active"][data-codex-os="win32"][data-codex-window-chrome="
   html[data-dream-skin="active"][data-codex-os="win32"]
     [data-codex-composer-root][data-composer-placement="thread"] [data-ds-part="composer"] {
     backdrop-filter: blur(16px) saturate(108%) !important;
+  }
+
+  /* 26.1103 renamed CSS modules. Use the native data contract for the Home
+     cap/body: one tint per surface, identical blur, no second opaque body. */
+  html[data-dream-skin="active"] [data-codex-composer-root][data-composer-placement="home"]
+    :is([data-ds-part="composer"], [data-composer-home-utility-bar-position="above"]) {
+    background: rgb(var(--ds-panel-rgb) / var(--ds-upload-panel-alpha, .94)) !important;
+    backdrop-filter: blur(16px) saturate(108%) !important;
+  }
+  html[data-dream-skin="active"] [data-codex-composer-root][data-composer-placement="home"]
+    [data-ds-part="composer"] > [data-composer-body] {
+    background: transparent !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
   }
 }

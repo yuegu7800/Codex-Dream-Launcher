@@ -1,11 +1,16 @@
-﻿{
+{
     "schema":  1,
-    "version":  "0.2.0-seamless.1",
+    "version":  "0.2.0-seamless.2",
     "files":  [
                   {
                       "path":  ".gitattributes",
                       "bytes":  138,
                       "sha256":  "194df1211f4eb738fd40e49fd53ee1c4c200b7fccb620eb8404bb1a6f27ac3b1"
+                  },
+                  {
+                      "path":  ".github/workflows/checks.yml",
+                      "bytes":  318,
+                      "sha256":  "c1b39e406bf4af8fdb12b874b110745c74457581a2595f4feb1a5a4b7dfc0ad8"
                   },
                   {
                       "path":  ".github/workflows/packages.yml",
@@ -34,8 +39,13 @@
                   },
                   {
                       "path":  "docs/CHANGES.md",
-                      "bytes":  1851,
-                      "sha256":  "0e40098abde3cd1e13651a8204a2cd292f8afab5a4c5b037bbdecd486cd3303b"
+                      "bytes":  2669,
+                      "sha256":  "109605fdae5c37f14af995c63e1537be45852d7321a0da4861a25c42ac4c7615"
+                  },
+                  {
+                      "path":  "docs/COMPATIBILITY.md",
+                      "bytes":  3230,
+                      "sha256":  "b3b3d3b98d61b80ead3ad6455302a5df59aa7c0b20825c7a27f491998732a12a"
                   },
                   {
                       "path":  "docs/DEPLOYMENT.md",
@@ -49,8 +59,8 @@
                   },
                   {
                       "path":  "docs/PUBLISHING.md",
-                      "bytes":  2025,
-                      "sha256":  "db56960c160a0027541d2052d72d5734e1f6646862f06734f89bb8e445b61cc7"
+                      "bytes":  2064,
+                      "sha256":  "a60db4eac2bb2f959a94ce3e82ab20e1ad10bb677d89d40e94be670c9a04f3e5"
                   },
                   {
                       "path":  "docs/SECURITY-MODES.md",
@@ -74,8 +84,8 @@
                   },
                   {
                       "path":  "engine/assets/dream-skin.css",
-                      "bytes":  97219,
-                      "sha256":  "78f33c79448ef9ed6a560a490411952111fedf1db0f877673a33b2f6ca1ac30c"
+                      "bytes":  98508,
+                      "sha256":  "4078c6f30d65931dd32c9bb0daf98ab04177008318d90a413355d8bf65b22741"
                   },
                   {
                       "path":  "engine/assets/renderer-inject.js",
@@ -109,8 +119,8 @@
                   },
                   {
                       "path":  "engine/scripts/common-windows.ps1",
-                      "bytes":  64840,
-                      "sha256":  "a6ea8e59633943ec49f2d41061882e84a7b2255c4b442944d55fb0dd36914fc9"
+                      "bytes":  65370,
+                      "sha256":  "128b3f627b08115e96b191d2c91262ecdb1d6f8c4db69f7ac45ce1b3ff3c38aa"
                   },
                   {
                       "path":  "engine/scripts/config-utf8.ps1",
@@ -184,8 +194,8 @@
                   },
                   {
                       "path":  "README.md",
-                      "bytes":  6348,
-                      "sha256":  "fb73f7317ceceacd2570742fd1fb6ca74ae734a47bd25ec46ffe66e04e8e4f84"
+                      "bytes":  6684,
+                      "sha256":  "2292020ecf5f937a8605a70b4ec23ba6b226eecb6ff3c8b85a7d74be9a6f199a"
                   },
                   {
                       "path":  "scripts/Build.ps1",
@@ -239,8 +249,8 @@
                   },
                   {
                       "path":  "scripts/Test-Package.ps1",
-                      "bytes":  3110,
-                      "sha256":  "e02eb6870ad4fca4f9b91650b2a8b220c32a9bec9ac6faf6b68ba6b1ffaba1ab"
+                      "bytes":  3160,
+                      "sha256":  "6fe9ab6463d3455126520734c5e167f892f69024815ac94430fd8ebd6b23141d"
                   },
                   {
                       "path":  "scripts/Theme-Library.ps1",
@@ -269,8 +279,8 @@
                   },
                   {
                       "path":  "scripts/Wait-DragonSkinReady.ps1",
-                      "bytes":  10862,
-                      "sha256":  "2feffb45cc5a269171a7aefa3a869bf30f184ad7e142e2bdee8414405eacd44b"
+                      "bytes":  11129,
+                      "sha256":  "f951e91763de7205129b3e110573cf5e86716655aa5749af1cda2ae3e1a66354"
                   },
                   {
                       "path":  "src/app.manifest",
@@ -306,6 +316,11 @@
                       "path":  "tests/SecurityTests.mjs",
                       "bytes":  1222,
                       "sha256":  "e78b75bf28432a4a99228de0daf61032c9c83492d5830a162a34302f3aa845ec"
+                  },
+                  {
+                      "path":  "tests/StaleWatcherTests.ps1",
+                      "bytes":  1763,
+                      "sha256":  "06ac23cdfdcfced8634dfacc5bf2cfda78dc46dd8e0e7691695e65868199ef01"
                   },
                   {
                       "path":  "tests/StartupModeTests.ps1",
@@ -375,7 +390,7 @@
                   {
                       "path":  "VERSION",
                       "bytes":  17,
-                      "sha256":  "8904b49b5cba964ad2c5c4c3bb9ea3847f30a83fdfdb32a834a93a8b6e2fd290"
+                      "sha256":  "f363fccddea80a85df8b41b0ffa920ad6931c6efb22e9bb4d9a9f00dbf2eef4c"
                   },
                   {
                       "path":  "Wallpaper-Library.cmd",

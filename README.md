@@ -2,13 +2,15 @@
 
 Windows x64 的 Codex 启动动画 + 动态壁纸整合包。保留当前修复版的龙娘动画、声音、居中窗口、巨幕衔接和动态壁纸；安装脚本自动识别本机官方 Codex，不需要复制作者电脑的路径或配置。
 
-社区整合版本：`0.2.0-seamless.1`。基于 Dragon Codex Boot 0.2.0 和 Codex Dynamic Skin 1.7.3，非 OpenAI 官方组件。
+社区整合版本：`0.2.0-seamless.2`。基于 Dragon Codex Boot 0.2.0 和 Codex Dynamic Skin 1.7.3，非 OpenAI 官方组件。
+
+本次修复旧进程记录导致壁纸加载失败、失败回退重复开窗，以及 Codex 26.1103 的顶栏/输入区色差。后续官方更新的适配与回退流程见 [兼容性维护策略](docs/COMPATIBILITY.md)。
 
 ## 安装
 
 先安装并正常打开一次 Windows 官方 Codex，完成登录。需要 Windows 10/11 x64、.NET Framework 4.8 和 Windows PowerShell 5.1；Windows N 版本还需要媒体功能包。当前只适配经过校验的 `OpenAI.Codex` Store/MSIX 安装。
 
-**普通用户：** 从本仓库 Releases 下载 `DragonCodexBoot-0.2.0-seamless.1-win-x64-offline.zip`，完整解压，双击 `Install.cmd`。随后从桌面或开始菜单的 **Codex** 快捷方式打开。
+**普通用户：** 从本仓库 Releases 下载已发布版本的 `DragonCodexBoot-<版本>-win-x64-offline.zip`，完整解压，双击 `Install.cmd`。随后从桌面或开始菜单的 **Codex** 快捷方式打开。源码版本可能领先于离线包；没有对应附件时，按下方源码安装步骤操作。
 
 **让 GPT 部署：** 下载或克隆此仓库，把所在目录交给可操作本机文件和终端的 GPT/Codex，并复制 [DEPLOY_WITH_GPT.md](DEPLOY_WITH_GPT.md) 中的提示词。网页版纯聊天 GPT 只能提供指导，不能直接操作本机。
 
